@@ -22,3 +22,7 @@ Console.WriteLine($"Текст: {text2}");
 Console.WriteLine($"Количество символов: {text2.Length}");
 Console.WriteLine($"Количество байтов UTF-8: {textBytes2.Length}");
 Console.WriteLine($"Байты: {BitConverter.ToString(textBytes2)}");
+
+
+
+
