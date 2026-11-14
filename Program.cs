@@ -22,7 +22,23 @@ Console.WriteLine($"Текст: {text2}");
 Console.WriteLine($"Количество символов: {text2.Length}");
 Console.WriteLine($"Количество байтов UTF-8: {textBytes2.Length}");
 Console.WriteLine($"Байты: {BitConverter.ToString(textBytes2)}");
+Console.WriteLine();
+string english = "A";
+string russian = "А";
+byte[] englishBytes = Encoding.UTF8.GetBytes(english);
+byte[] russianBytes = Encoding.UTF8.GetBytes(russian);
+Console.WriteLine($"A: {BitConverter.ToString(englishBytes)}");
+Console.WriteLine($"А: {BitConverter.ToString(russianBytes)}");
 
-
-
-
+string text3 = "Привет";
+byte[] bytes = Encoding.UTF8.GetBytes(text3);
+string restored = Encoding.UTF8.GetString(bytes);
+Console.WriteLine($"Исходная строка: {text3}");
+Console.WriteLine($"Восстановленная: {restored}");
+Console.WriteLine();
+int number2 = 123456789;
+byte[] bytes2 = BitConverter.GetBytes(number2);
+int restored2 = BitConverter.ToInt32(bytes2, 0);
+Console.WriteLine($"Исходное число: {number2}");
+Console.WriteLine($"Восстановленное число: {restored2}");
+Console.WriteLine($"Байты: {BitConverter.ToString(bytes2)}");
